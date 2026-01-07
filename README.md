@@ -105,7 +105,6 @@ Response
 
 ## Fraud Detection Flow
 
-```mermaid
 flowchart TD
     A[Incoming Transaction] --> B[Behavioral Agent]
     B -->|Risk + Reason| C[Geo Agent]
