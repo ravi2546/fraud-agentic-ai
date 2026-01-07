@@ -18,9 +18,10 @@ flowchart TD
     C -->|Risk + Reason| D[Device Agent]
     D -->|Signals| E[LLM Decision Agent]
 
-    E -->|VERY_LOW_RISK| F[✅ ALLOW]
+    E -->|VERY_LOW_RISK| F[ALLOW]
     E -->|LOW_RISK| F
-    E -->|MID_RISK| G[🕵️ REVIEW]
+    E -->|MID_RISK| G[REVIEW]
+
 
 
 ## Project Structure
