@@ -11,17 +11,16 @@ This project implements an **agentic AI pipeline** for fraud detection in bankin
 - **Device Agent**: Assesses device risk using `device_tool.py`.
 - **LLM Decision Agent**: Aggregates agent risks to give a final decision (`ALLOW`, `REVIEW`).
 
----
-
+```mermaid
 flowchart TD
     A[Incoming Transaction] --> B[Behavioral Agent]
     B -->|Risk + Reason| C[Geo Agent]
     C -->|Risk + Reason| D[Device Agent]
     D -->|Signals| E[LLM Decision Agent]
 
-    E -->|VERY_LOW_RISK| F[ALLOW]
+    E -->|VERY_LOW_RISK| F[✅ ALLOW]
     E -->|LOW_RISK| F
-    E -->|MID_RISK| G[REVIEW]
+    E -->|MID_RISK| G[🕵️ REVIEW]
 
 
 ## Project Structure
